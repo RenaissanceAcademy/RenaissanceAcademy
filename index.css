@@ -1,0 +1,69 @@
+/* At-rules */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+/* Layout CSS */
+header {
+	height:55px;
+	width:100%;
+}
+
+header #logo {
+	float:left;
+	width:175px;
+}
+
+header nav {
+	line-height:55px;
+	white-space:nowrap;
+}
+
+.wrapper {
+	display:table;
+	width:100%;
+}
+
+.leftSidebar, .centerContent, .rightSidebar {
+	display:table-cell;
+	vertical-align:top;
+	border-style:solid;
+	border-width:1px;
+}
+
+.leftSidebar, .rightSidebar {
+	width:150px;
+}
+
+.centerContent {
+	padding:25px;
+}
+
+.centerContent .newsPost {
+	width:100%;
+	border-style:solid;
+	border-width:1px;
+}
+
+.centerContent .newsPost + .newsPost {
+	margin-top:25px;
+}
+
+/* Styling CSS */
+body {
+	font-family:'Source Sans Pro', sans-serif;
+}
+
+nav a {
+	padding-left:10px;
+	text-decoration:none;
+	color:#727272;
+}
+
+nav a:hover {
+	color:#E3633E;
+	font-weight:bold;
+}
+
+.centerContent .newsPost {
+	padding-left:15px;
+	padding-bottom:15px;
+}
