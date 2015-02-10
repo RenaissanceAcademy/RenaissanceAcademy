@@ -17,3 +17,17 @@ function post(html) {
 	// clear post text box
 	input.value = "";
 }
+
+var eventMap = {};
+eventMap['02/04/2015'] = 'asdf';
+
+$(document).ready(
+	function showCalendar() {
+		$('#calendar').datepicker({
+			onSelect: function (dateText) {
+				$('#calendar-events').html('<h4>Events on ' + dateText + ':</h4><ul id="calendar-events-list"></ul>');
+				if (eventMap[dateText]) $('#calendar-events-list').html('<li>' + eventMap[dateText] + '</li>');
+			}
+		});
+	}
+);
