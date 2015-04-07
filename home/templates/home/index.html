@@ -1,0 +1,25 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body_block %}
+	<!-- TODO: implement storage engine for new posts -->
+	<div class="newsPost" id="post2">
+		<h3 class="newsTitle">This is a title</h3>
+		<p class="newsBody">This is definitely a news post.</p>
+
+		<!-- TODO: implement storage engine for new post comments -->
+		<ul class="comments"></ul>
+		<input class="text"/>
+		<button onClick="post(this.parentNode);">Post</button>
+	</div>
+
+	<div class="newsPost" id="post1">
+		<h3 class="newsTitle">This is a different title</h3>
+		<p class="newsBody">This is definitely another news post.</p>
+
+		<ul class="comments"></ul>
+		<input class="text"/>
+		<button onClick="post(this.parentNode);">Post</button>
+	</div>
+{% endblock %}
