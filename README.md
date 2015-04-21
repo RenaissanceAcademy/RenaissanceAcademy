@@ -6,32 +6,24 @@
      `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
     ----------------------------------------------------------------- 
 
+## Running the server
+1. `python manage.py makemigrations`
+2. `python manage.py runserver`
+3. click on the link in the notification popup
 
-Welcome to your Django project on Cloud9 IDE!
 
-Your Django project is already fully setup. Just click the "Run" button to start
-the application. On first run you will be asked to create an admin user. You can
-access your application from 'https://ra-base-mousseng.c9.io/' and the admin page from 
-'https://ra-base-mousseng.c9.io/admin'.
-
-## Starting from the Terminal
-
-In case you want to run your Django application from the terminal just run:
-
-1) Run syncdb command to sync models to database and create Django's default superuser and auth system
-
-    $ python manage.py syncdb
-
-2) Run Django
-
-    $ python manage.py runserver $IP:$PORT
-    
-## Support & Documentation
-
-Django docs can be found at https://www.djangoproject.com/
-
-You may also want to follow the Django tutorial to create your first application:
-https://docs.djangoproject.com/en/1.7/intro/tutorial01/
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE.
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+## Using the Database
+* Create your models
+  - write a class in `models.py`
+  - run `python manage.py makemigrations`
+* Update the admin site
+  - in `admin.py` import and register the models you created
+    - `admin.site.register(modelClassName)`
+  - you can now add records to the database models from the admin site
+* Build your views using the models
+  - first update your views and urls to handle the appropriate template file
+  - pass whatever data you need from your models to your views' render context
+  - inline the context into your template
+* Viewing your database from command line:
+  - `python manage.py dbshell`
+  - `.dump`
